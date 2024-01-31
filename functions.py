@@ -88,7 +88,7 @@ async def newApplication_verify_answer(message: Message, bot: Bot, state: FSMCon
                 f"Kasbi: {data.get('job')}\n"
                 f"Maqsadi: {data.get('goal')}\n"
                 )
-        await bot.send_message(1184193890, f"Yangi Ariza:\n\n{ariza}")
+        await bot.send_message('admin_id', f"Yangi Ariza:\n\n{ariza}")
         await message.answer("Arizangiz qabul qilindi. ✅")
         await state.clear()
     else: await message.answer("Yo menga ha deng yoki /stop buyrug'ini yuboring!")

@@ -7,10 +7,10 @@ from states import newApplication
 dp = Dispatcher()
 
 async def startup_answer(bot: Bot):
-    await bot.send_message(1184193890, "Bot Ishga tushdi! ✅")
+    await bot.send_message('admin_id', "Bot Ishga tushdi! ✅")
 
 async def shutdown_answer(bot: Bot):
-    await bot.send_message(1184193890, "Bot ishdan to'xtadi! ❌")
+    await bot.send_message('admin_id', "Bot ishdan to'xtadi! ❌")
 
 
 async def start():
@@ -28,7 +28,7 @@ async def start():
     dp.message.register(newApplication_goal_answer,newApplication.goal )
     dp.message.register(newApplication_verify_answer,newApplication.verify )
     dp.shutdown.register(shutdown_answer)
-    bot = Bot("6803882554:AAH91YHRcmFQQnZmhzy0ZWpRXscZiJBNeV4")
+    bot = Bot("bot_token")
     await bot.set_my_commands([
         BotCommand(command="/new", description="Yangi ariza yuborish!"),
         BotCommand(command="/stop", description="Arizani Bekor qilish!"),
